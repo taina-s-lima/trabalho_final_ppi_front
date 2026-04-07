@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Cadastro de Pessoas</title>
 </head>
 
@@ -30,6 +30,96 @@
             </ul>
         </div>
     </nav>
+    <br>
+    <form>
+        <div style="display:flex; gap:15px; align-items:end; justify-content: center; align-items: center;">
+            <div class="form-group">
+                <label for="pes_nome">Nome</label>
+                <input type="text" class="form-control" id="pes_nome" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="pes_email">E-mail</label>
+                <input type="email" class="form-control" id="pes_email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="form-group">
+                <label for="pes_telefone">Telefone</label>
+                <input type="text" class="form-control" id="pes_telefone" placeholder="Digite seu telefone">
+            </div>
+            <div class="form-group">
+                <label for="pes_cpf">CPF</label>
+                <input type="text" class="form-control" id="pes_cpf" placeholder="Digite seu CPF">
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <h4 style="margin: 10px; padding: 10px;">Listagem de Pessoas</h4>
+
+    <div style="margin: 10px; padding: 10px;">
+        <table class="table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Imóveis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td><a href="http://">Ver Imóveis</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td><a href="http://">Ver Imóveis</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td><button class="btn btn-primary verImoveisBtn">Ver Imóveis</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal" tabindex="-1" id="verImovel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lista de Imóveis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.verImoveisBtn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                $('#verImovel').modal('show');
+            });
+        });
+    </script>
+
 </body>
 
 </html>

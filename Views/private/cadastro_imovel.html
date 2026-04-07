@@ -31,61 +31,64 @@
             </ul>
         </div>
     </nav>
-    <br>
     <form>
         <div style="display:flex; gap:15px; align-items:end; justify-content: center; align-items: center;">
             <div class="form-group">
-                <label for="pes_nome">Nome</label>
-                <input type="text" class="form-control" id="pes_nome" placeholder="Digite seu nome">
+                <label for="imo_titulo">Titulo</label>
+                <input type="text" class="form-control" id="imo_titulo" placeholder="Digite o titulo">
             </div>
             <div class="form-group">
-                <label for="pes_email">E-mail</label>
-                <input type="email" class="form-control" id="pes_email" placeholder="Digite seu e-mail">
+                <label for="imo_tipo">Tipo: </label>
+                <input type="text" class="form-control" id="imo_tipo" placeholder="Digite o tipo do imóvel">
             </div>
             <div class="form-group">
-                <label for="pes_telefone">Telefone</label>
-                <input type="text" class="form-control" id="pes_telefone" placeholder="Digite seu telefone">
-            </div>
-            <div class="form-group">
-                <label for="pes_cpf">CPF</label>
-                <input type="text" class="form-control" id="pes_cpf" placeholder="Digite seu CPF">
+                <label for="imo_valor">Valor:</label>
+                <input type="text" class="form-control" id="imo_valor" placeholder="Digite o valor">
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>
 
-    <hr>    
+    <hr>
 
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+    <h4 style="margin: 10px; padding: 10px;">Listagem de Imóveis</h4>
+
+    <div style="margin: 10px; padding: 10px;">
+        <table class="table" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>Otto</td>
+                    <td><a href="http://">Reservar</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>Thornton</td>
+                    <td><a href="http://">Reservar</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>the Bird</td>
+                    <td><a href="http://">Reservar</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 
