@@ -83,13 +83,9 @@ function cadastrarImovel(event) {
                     formulario.reset();
                     obterImoveis();
                 } else {
-                    alert("Erro ao cadastrar imóvel: " + conteudoJSON.mensagem);
+                    alert("Erro ao cadastrar imóvel");
                 }
             })
-            .catch(erro => {
-                console.error("Erro na requisição:", erro);
-                alert("Erro na comunicação com o servidor.");
-            });
     } else {
         formulario.classList.add("was-validated");
     }
