@@ -31,11 +31,14 @@
             </ul>
         </div>
     </nav>
-    <form>
+    <form id="formImovel">
         <div style="display:flex; gap:15px; align-items:end; justify-content: center; align-items: center;">
             <div class="form-group">
                 <label for="imo_titulo">Titulo</label>
                 <input type="text" class="form-control" id="imo_titulo" placeholder="Digite o titulo">
+                <div class="invalid-feedback">
+                    Por favor, digite um título válido.
+                </div>
             </div>
             <div class="form-group">
                 <label for="imo_tipo">Tipo: </label>
@@ -45,7 +48,7 @@
                 <label for="imo_valor">Valor:</label>
                 <input type="text" class="form-control" id="imo_valor" placeholder="Digite o valor">
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="button" id="btnCadastrar" class="btn btn-primary">Cadastrar</button>
         </div>
     </form>
 
@@ -64,32 +67,31 @@
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>Otto</td>
-                    <td><a href="http://">Reservar</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>Thornton</td>
-                    <td><a href="http://">Reservar</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>the Bird</td>
-                    <td><a href="http://">Reservar</a></td>
-                </tr>
-            </tbody>
+            <tbody id="tabelaImoveis"></tbody>
         </table>
     </div>
 
+    <div class="modal" tabindex="-1" id="modalReservarImoveis">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lista de Imóveis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+<script src="scripts/imovel.js"></script>
 
 </html>
